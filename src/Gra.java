@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Gra {
-    private ArrayList<Integer> wylosowane = new ArrayList<>();
+    private static ArrayList<Integer> wylosowane = new ArrayList<>();
     private ArrayList<Integer> wpisane = new ArrayList<>();
     private LinkedList<Integer> trafione = new LinkedList<>();
 
     private void wylosujLiczby(int ile) {
-        for (int i = 0; i < ile; i++) {
+        while(wylosowane.size() < 6){
             int liczba1 = (int) (Math.random() * 10 + 1);
             while (wylosowane.contains(liczba1)) {
                 liczba1 = (int) (Math.random() * 10 + 1);
